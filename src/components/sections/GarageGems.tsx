@@ -30,9 +30,7 @@ export function GarageGems() {
       <SectionHeader
         title="Garage Gems"
         subtitle="Pre-owned treasures that deliver exceptional value without compromising on driving pleasure."
-        dark={true}
       />
-
       <div className="relative">
         <div
           ref={scrollRef}
