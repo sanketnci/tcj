@@ -28,11 +28,11 @@ export function Gallery() {
   };
 
   return (
-    <Section id="gallery" dark={true}>
+    <Section id="gallery">
       <SectionHeader
         title="Gallery"
         subtitle="A curated collection of automotive photography capturing the essence of driving excellence."
-        dark={true}
+
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">

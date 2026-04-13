@@ -55,7 +55,7 @@ const socials = [
 
 export function Socials() {
   return (
-    <Section id="socials" dark={true} className="py-16 sm:py-20 md:py-24">
+    <Section id="socials" className="py-16 sm:py-20 md:py-24">
       <motion.div
         className="text-center mb-10 sm:mb-12 md:mb-16"
         initial={{ opacity: 0, y: 30 }}

@@ -55,13 +55,13 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" dark={false} className="relative overflow-hidden">
+    <Section id="contact" className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-bg-primary/5 to-transparent" />
       
       <SectionHeader
         title="Get In Touch"
         subtitle="Have a story tip, want to collaborate, or just want to say hello? We'd love to hear from you."
-        dark={false}
+
       />
 
       <div className="max-w-2xl mx-auto px-4 sm:px-0">
