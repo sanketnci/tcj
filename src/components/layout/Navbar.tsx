@@ -8,22 +8,17 @@ import { cn } from '@/lib/utils';
 
 type Theme = 'dark' | 'light';
 
-const navLinks = [
+interface NavLink {
+  label: string;
+  href: string;
+  dropdown?: { label: string; href: string }[];
+}
+
+const navLinks: NavLink[] = [
   { label: 'Home', href: '#hero' },
+  { label: 'Articles', href: '#reviews' },
+  { label: 'Market News', href: '#news' },
   { label: 'Gallery', href: '#gallery' },
-  {
-    label: 'Reviews',
-    href: '#reviews',
-    dropdown: [
-      { label: 'First Drive', href: '#first-drive' },
-      { label: 'Comparison', href: '#comparison' },
-      { label: 'Road Test', href: '#road-test' },
-      { label: 'Long Term Report', href: '#long-term' },
-    ],
-  },
-  { label: 'News', href: '#news' },
-  { label: 'Featured', href: '#featured' },
-  { label: 'Garage Gems', href: '#garage-gems' },
   { label: 'Contact', href: '#contact' },
 ];
 

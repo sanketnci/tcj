@@ -27,10 +27,10 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-base sm:text-lg font-semibold text-text-primary mb-4 sm:mb-6">Quick Links</h4>
             <ul className="space-y-2 sm:space-y-3">
-              {['Home', 'Gallery', 'Reviews', 'News', 'Contact'].map((link) => (
+              {['Home', 'Articles', 'News'].map((link) => (
                 <li key={link}>
                   <Link
-                    href={`#${link.toLowerCase()}`}
+                    href={`#${link === 'Home' ? 'hero' : link === 'Articles' ? 'reviews' : 'news'}`}
                     className="text-text-secondary hover:text-accent-gold transition-colors text-sm sm:text-base"
                   >
                     {link}
@@ -41,9 +41,9 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-base sm:text-lg font-semibold text-text-primary mb-4 sm:mb-6">Categories</h4>
+            <h4 className="font-serif text-base sm:text-lg font-semibold text-text-primary mb-4 sm:mb-6">Articles</h4>
             <ul className="space-y-2 sm:space-y-3">
-              {['First Drive', 'Comparison', 'Road Test', 'Long Term Report', 'Garage Gems'].map((link) => (
+              {['Market Trends', 'Battery Tech', 'Infrastructure'].map((link) => (
                 <li key={link}>
                   <Link
                     href="#reviews"
@@ -65,7 +65,7 @@ export function Footer() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-text-secondary text-xs sm:text-sm">
-            © {new Date().getFullYear()} The Car Journal. All rights reserved.
+            © {new Date().getFullYear()} <span className="font-heading">The Car Journal</span>. All rights reserved.
           </p>
           <div className="flex items-center gap-4 sm:gap-6">
             <Link href="#" className="text-text-secondary hover:text-accent-gold transition-colors text-xs sm:text-sm">

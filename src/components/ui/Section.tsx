@@ -11,13 +11,12 @@ interface SectionProps {
   id?: string;
 }
 
-export function Section({ children, className, dark = true, id }: SectionProps) {
+export function Section({ children, className, id }: SectionProps) {
   return (
     <section
       id={id}
       className={cn(
-        'relative py-12 sm:py-16 md:py-20 lg:py-28',
-        dark ? 'bg-bg-primary' : 'bg-bg-light text-text-dark',
+        'relative py-12 sm:py-16 md:py-20 lg:py-28 bg-bg-primary transition-colors duration-300',
         className
       )}
     >
@@ -32,17 +31,13 @@ interface SectionHeaderProps {
   title: string;
   subtitle?: string;
   centered?: boolean;
-  dark?: boolean;
 }
 
-export function SectionHeader({ title, subtitle, centered = true, dark = true }: SectionHeaderProps) {
+export function SectionHeader({ title, subtitle, centered = true }: SectionHeaderProps) {
   return (
     <div className={cn('mb-10 sm:mb-12 md:mb-16', centered && 'text-center')}>
       <motion.h2
-        className={cn(
-          'font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4',
-          dark ? 'text-text-primary' : 'text-text-dark'
-        )}
+        className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 text-text-primary"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -52,10 +47,7 @@ export function SectionHeader({ title, subtitle, centered = true, dark = true }:
       </motion.h2>
       {subtitle && (
         <motion.p
-          className={cn(
-            'max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2 sm:px-0',
-            dark ? 'text-text-secondary' : 'text-text-dark-secondary'
-          )}
+          className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg px-2 sm:px-0 text-text-secondary"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

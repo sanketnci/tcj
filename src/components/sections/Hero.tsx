@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
@@ -13,7 +14,7 @@ export function Hero() {
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
-  const words = ['Driven', 'by', 'Passion'];
+  const words = ['Electric', 'Future', 'Arrived'];
 
   return (
     <section id="hero" ref={ref} className="relative h-screen min-h-[600px] overflow-hidden">
@@ -22,8 +23,8 @@ export function Hero() {
         style={{ y }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1920&q=80"
-          alt="Luxury sports car in dramatic lighting"
+          src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1920&q=80"
+          alt="Electric vehicle charging"
           fill
           className="object-cover"
           priority
@@ -74,8 +75,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          Expert reviews, stunning photography, and the stories behind 
-          the machines that move us.
+          Discover the comprehensive analysis of India's shifting 
+          automotive landscape and the battery tech powering it.
         </motion.p>
 
         <motion.div
@@ -83,9 +84,11 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1 }}
         >
-          <Button size="lg">
-            Explore Reviews
-          </Button>
+          <Link href="/articles/Future of EVs in India.pdf" target="_blank">
+            <Button size="lg">
+              Read Latest Report
+            </Button>
+          </Link>
         </motion.div>
       </motion.div>
 

@@ -1,11 +1,12 @@
 export interface Review {
   id: string;
   title: string;
-  category: 'First Drive' | 'Comparison' | 'Road Test' | 'Long Term Report';
+  category: string;
   excerpt: string;
   image: string;
   date: string;
   readTime: string;
+  url?: string;
 }
 
 export interface GarageGem {
@@ -23,6 +24,7 @@ export interface NewsItem {
   category: string;
   date: string;
   readTime: string;
+  url?: string;
 }
 
 export interface GalleryImage {

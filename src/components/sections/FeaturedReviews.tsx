@@ -10,11 +10,10 @@ export function FeaturedReviews() {
   const featuredReviews = reviews.slice(0, 6);
 
   return (
-    <Section id="reviews" dark={false}>
+    <Section id="reviews">
       <SectionHeader
-        title="Featured Reviews"
-        subtitle="In-depth analysis of the latest and greatest automobiles from around the world."
-        dark={false}
+        title="Featured Reports"
+        subtitle="In-depth analysis of the automotive landscape and market trends."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -31,22 +30,13 @@ export function FeaturedReviews() {
               title={review.title}
               category={review.category}
               excerpt={review.excerpt}
+              href={review.url}
             />
           </motion.div>
         ))}
       </div>
 
-      <motion.div
-        className="mt-10 sm:mt-12 md:mt-16 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <Button variant="secondary">
-          View All Reviews
-        </Button>
-      </motion.div>
+
     </Section>
   );
 }

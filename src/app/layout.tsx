@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { IM_Fell_English_SC, Cormorant_Garamond, Manrope, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Cormorant_Garamond, Manrope, JetBrains_Mono } from "next/font/google";
 import { MotionProvider } from "@/providers/MotionProvider";
 import "./globals.css";
 
-const oldLondon = IM_Fell_English_SC({
+const oldLondon = localFont({
+  src: "../fonts/OldLondon.ttf",
   variable: "--font-old-london",
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
 });
 
 const cormorant = Cormorant_Garamond({

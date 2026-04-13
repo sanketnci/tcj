@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ReactNode } from 'react';
 
@@ -10,15 +11,16 @@ interface CardProps {
   className?: string;
   hover?: boolean;
   onClick?: () => void;
+  href?: string;
 }
 
-export function Card({ children, className, hover = true, onClick }: CardProps) {
-  return (
+export function Card({ children, className, hover = true, onClick, href }: CardProps) {
+  const content = (
     <motion.div
       onClick={onClick}
       className={cn(
-        'relative overflow-hidden rounded-sm bg-bg-tertiary',
-        hover && 'cursor-pointer',
+        'relative h-full overflow-hidden rounded-sm bg-bg-tertiary',
+        (hover || onClick || href) && 'cursor-pointer',
         className
       )}
       whileHover={hover ? { y: -4, boxShadow: '0 16px 32px rgba(0,0,0,0.3)' } : {}}
@@ -27,6 +29,16 @@ export function Card({ children, className, hover = true, onClick }: CardProps) 
       {children}
     </motion.div>
   );
+
+  if (href) {
+    return (
+      <Link href={href} target="_blank" rel="noopener noreferrer" className="block h-full">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }
 
 interface ReviewCardProps {
@@ -35,11 +47,12 @@ interface ReviewCardProps {
   category: string;
   excerpt: string;
   onClick?: () => void;
+  href?: string;
 }
 
-export function ReviewCard({ image, title, category, excerpt, onClick }: ReviewCardProps) {
+export function ReviewCard({ image, title, category, excerpt, onClick, href }: ReviewCardProps) {
   return (
-    <Card className="group h-full" onClick={onClick}>
+    <Card className="group" onClick={onClick} href={href}>
       <div className="relative aspect-[16/10] overflow-hidden">
         <Image
           src={image}
@@ -112,14 +125,16 @@ interface NewsCardProps {
   date: string;
   readTime: string;
   featured?: boolean;
+  href?: string;
 }
 
-export function NewsCard({ title, category, date, readTime, featured = false }: NewsCardProps) {
-  return (
+export function NewsCard({ title, category, date, readTime, featured = false, href }: NewsCardProps) {
+  const content = (
     <motion.article
       className={cn(
         'group p-4 sm:p-6 border-b border-glass-border transition-colors hover:bg-bg-tertiary/50',
-        featured && 'md:col-span-2 md:p-6 sm:md:p-8'
+        featured && 'md:col-span-2 md:p-6 sm:md:p-8',
+        href && 'cursor-pointer'
       )}
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -148,4 +163,14 @@ export function NewsCard({ title, category, date, readTime, featured = false }: 
       />
     </motion.article>
   );
+
+  if (href) {
+    return (
+      <Link href={href} target="_blank" rel="noopener noreferrer">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

@@ -56,10 +56,10 @@
   --bg-light: #fafafa;
   --bg-light-secondary: #f5f5f5;
 
-  --text-primary: #1a1a1a;
-  --text-secondary: #6b6b6b;
-  --text-dark: #1a1a1a;
-  --text-dark-secondary: #6b6b6b;
+  --text-primary: #111111;
+  --text-secondary: #444444;
+  --text-dark: #111111;
+  --text-dark-secondary: #444444;
 
   --accent-gold: #b8943f;
   --accent-silver: #888888;
