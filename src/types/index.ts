@@ -27,6 +27,19 @@ export interface NewsItem {
   url?: string;
 }
 
+export interface Article {
+  id: string;
+  slug: string;
+  title: string;
+  category: string;
+  date: string;
+  readTime: string;
+  excerpt: string;
+  image: string;
+  content: string[];
+  tags?: string[];
+}
+
 export interface GalleryImage {
   id: string;
   src: string;

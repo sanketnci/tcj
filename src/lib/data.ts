@@ -1,4 +1,103 @@
-import { Review, GarageGem, NewsItem, GalleryImage } from '@/types';
+import { Review, GarageGem, NewsItem, GalleryImage, Article } from '@/types';
+
+export const articles: Article[] = [
+  {
+    id: 'future-of-evs-in-india',
+    slug: 'future-of-evs-in-india',
+    title: 'The Future of EVs in India: A Comprehensive Market Analysis',
+    category: 'Analysis',
+    date: '2026-04-13',
+    readTime: '10 min read',
+    excerpt: 'India sold over 2 million electric vehicles in FY 24-25, with two-wheelers leading the charge at 59.4% market share. Discover the trends shaping the future of mobility.',
+    image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200&q=80',
+    content: [
+      'India sold over 2 million electric vehicles in FY 24-25, and the country is now at an inflection point for sustainable mobility. Two-wheelers continue to dominate volume, while passenger cars and commercial EVs are gradually building a broader charging infrastructure across cities.',
+      'This article unpacks the latest sales trends, charging infrastructure growth, government incentives, and consumer sentiment that will shape the EV market over the next five years.',
+      'Key areas to watch include the rise of affordable battery technology, local manufacturing, and regulatory support for second-life batteries. Together, these forces are positioning India as a major growth market in global electric mobility.',
+    ],
+    tags: ['EV', 'India', 'market analysis', 'sustainability'],
+  },
+  {
+    id: 'li-nmc-vs-li-lfp',
+    slug: 'li-nmc-vs-li-lfp',
+    title: 'Li-NMC vs. Li-LFP: Which Battery Chemistry Wins in India?',
+    category: 'Technology',
+    date: '2026-04-10',
+    readTime: '12 min read',
+    excerpt: 'From energy density to thermal stability, discover why LFP batteries are becoming the preferred choice for India’s unique climatic challenges.',
+    image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200&q=80',
+    content: [
+      'Battery chemistry is the backbone of EV performance. Lithium nickel manganese cobalt (Li-NMC) has long been favored for high energy density, while lithium iron phosphate (Li-LFP) is gaining traction for cost, longevity, and thermal stability.',
+      'This article compares these two chemistries against India’s operating conditions, including heat, charging habits, and total cost of ownership. For many domestic manufacturers, LFP now offers a compelling balance between durability and affordability.',
+      'We also examine the implications for battery recycling, warranty expectations, and future supply chain shifts as more OEMs localize battery production.',
+    ],
+    tags: ['battery', 'EV tech', 'Li-NMC', 'LFP'],
+  },
+  {
+    id: 'range-anxiety-and-battery-swapping',
+    slug: 'range-anxiety-and-battery-swapping',
+    title: 'Range Anxiety and the Battery Swapping Solution',
+    category: 'Infrastructure',
+    date: '2026-04-05',
+    readTime: '8 min read',
+    excerpt: 'Is Battery as a Service (BaaS) the missing link for mass EV adoption? Explore how swapping stations could revolutionize urban commuting.',
+    image: 'https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?w=1200&q=80',
+    content: [
+      'Range anxiety remains a top concern for EV buyers, especially in densely populated Indian cities where charging infrastructure can vary dramatically. Battery swapping offers a fast alternative by replacing a depleted pack with a charged one in minutes.',
+      'This article examines the business models, station networks, and technology partnerships that are making battery swapping viable in India. We also discuss the operational challenges around standardization, safety, and customer acceptance.',
+      'As the ecosystem matures, battery swapping could become an important complement to traditional fast charging, especially for commercial fleets and two-wheeler adoption.',
+    ],
+    tags: ['battery swapping', 'infrastructure', 'EV adoption'],
+  },
+  {
+    id: 'india-hits-2-million-ev-sales',
+    slug: 'india-hits-2-million-ev-sales',
+    title: 'India Hits 2 Million EV Sales Milestone in FY 24-25',
+    category: 'Industry News',
+    date: '2026-04-13',
+    readTime: '4 min read',
+    excerpt: 'India’s EV market crossed the 2 million sales milestone, reinforcing steady progress for the country’s shared mobility and electrification targets.',
+    image: 'https://images.unsplash.com/photo-1549924231-f129b911e442?w=1200&q=80',
+    content: [
+      'The latest industry figures show that India reached 2 million electric vehicle sales in FY 24-25, driven largely by two-wheeler adoption and stronger entry-level EV offerings.',
+      'This milestone underlines the impact of subsidy programs, state-level incentives, and growing consumer trust in electric mobility. However, broader adoption will depend on charging infrastructure improvements and total cost advantages.',
+      'Manufacturers are also watching demand for higher-spec passenger EVs, and the next phase of growth is expected to focus on affordability, battery performance, and seamless ownership experiences.',
+    ],
+    tags: ['EV sales', 'industry news', 'India'],
+  },
+  {
+    id: 'two-wheeler-dominates-ev-market',
+    slug: 'two-wheeler-dominates-ev-market',
+    title: 'Two-Wheeler Segment Dominates Indian EV Market with 59% Share',
+    category: 'Market Trends',
+    date: '2026-04-11',
+    readTime: '5 min read',
+    excerpt: 'With two-wheelers accounting for nearly 60% of EV sales, the market is being shaped by affordable urban mobility and a new generation of electric scooters.',
+    image: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=1200&q=80',
+    content: [
+      'Two-wheelers have emerged as the fastest-growing segment in India’s EV market. Their lower price point, lighter weight, and easier charging needs make them ideal for urban commuters.',
+      'This article explores how OEMs are designing scooters for city traffic, longer mileage, and improved battery life. It also looks at how financing and subscription models are making electric scooters more accessible.',
+      'The two-wheeler category will likely remain the backbone of India’s EV volume, while passenger cars and commercial vehicles grow in parallel.',
+    ],
+    tags: ['two-wheeler', 'market trends', 'urban mobility'],
+  },
+  {
+    id: 'government-standardization-battery-swapping',
+    slug: 'government-standardization-battery-swapping',
+    title: 'Government Considering Standardization for Battery Swapping',
+    category: 'Policy',
+    date: '2026-04-08',
+    readTime: '6 min read',
+    excerpt: 'Indian policymakers are evaluating standards for battery swapping networks as the country seeks faster and safer EV charging solutions.',
+    image: 'https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=1200&q=80',
+    content: [
+      'Policymakers are discussing a framework for standardizing battery swapping in India, which would help reduce costs and improve interoperability across vendors.',
+      'Standardization could unlock faster deployment of swapping stations and build trust among fleet operators, especially for electric two-wheelers and delivery vehicles.',
+      'The article highlights the balance between regulatory oversight and market flexibility needed to accelerate an efficient battery swapping ecosystem.',
+    ],
+    tags: ['policy', 'battery swapping', 'standardization'],
+  },
+];
 
 export const reviews: Review[] = [
   {
@@ -9,7 +108,7 @@ export const reviews: Review[] = [
     image: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80',
     date: '2026-04-13',
     readTime: '10 min read',
-    url: '/articles/Future of EVs in India.pdf',
+    url: '/articles/future-of-evs-in-india',
   },
   {
     id: '2',
@@ -19,7 +118,7 @@ export const reviews: Review[] = [
     image: 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80',
     date: '2026-04-10',
     readTime: '12 min read',
-    url: '/articles/Future of EVs in India.pdf',
+    url: '/articles/li-nmc-vs-li-lfp',
   },
   {
     id: '3',
@@ -29,7 +128,7 @@ export const reviews: Review[] = [
     image: 'https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?w=800&q=80',
     date: '2026-04-05',
     readTime: '8 min read',
-    url: '/articles/Future of EVs in India.pdf',
+    url: '/articles/range-anxiety-and-battery-swapping',
   },
 ];
 
@@ -42,7 +141,7 @@ export const news: NewsItem[] = [
     category: 'Industry News',
     date: '2026-04-13',
     readTime: '4 min read',
-    url: '/articles/Future of EVs in India.pdf',
+    url: '/articles/india-hits-2-million-ev-sales',
   },
   {
     id: '2',
@@ -50,7 +149,7 @@ export const news: NewsItem[] = [
     category: 'Market Trends',
     date: '2026-04-11',
     readTime: '5 min read',
-    url: '/articles/Future of EVs in India.pdf',
+    url: '/articles/two-wheeler-dominates-ev-market',
   },
   {
     id: '3',
@@ -58,7 +157,7 @@ export const news: NewsItem[] = [
     category: 'Policy',
     date: '2026-04-08',
     readTime: '6 min read',
-    url: '/articles/Future of EVs in India.pdf',
+    url: '/articles/government-standardization-battery-swapping',
   },
 ];
 

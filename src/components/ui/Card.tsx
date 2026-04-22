@@ -31,7 +31,13 @@ export function Card({ children, className, hover = true, onClick, href }: CardP
   );
 
   if (href) {
-    return (
+    const isInternal = href.startsWith('/');
+
+    return isInternal ? (
+      <Link href={href} className="block h-full">
+        {content}
+      </Link>
+    ) : (
       <Link href={href} target="_blank" rel="noopener noreferrer" className="block h-full">
         {content}
       </Link>
@@ -165,7 +171,13 @@ export function NewsCard({ title, category, date, readTime, featured = false, hr
   );
 
   if (href) {
-    return (
+    const isInternal = href.startsWith('/');
+
+    return isInternal ? (
+      <Link href={href} className="block h-full">
+        {content}
+      </Link>
+    ) : (
       <Link href={href} target="_blank" rel="noopener noreferrer">
         {content}
       </Link>
