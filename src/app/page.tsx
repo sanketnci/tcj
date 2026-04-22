@@ -5,7 +5,6 @@ import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { FeaturedReviews } from '@/components/sections/FeaturedReviews';
 import { LatestNews } from '@/components/sections/LatestNews';
-import { Gallery } from '@/components/sections/Gallery';
 
 export default function Home() {
   return (

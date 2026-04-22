@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Cormorant_Garamond, Manrope, JetBrains_Mono } from "next/font/google";
 import { MotionProvider } from "@/providers/MotionProvider";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 import "./globals.css";
 
 const oldLondon = localFont({
@@ -52,7 +53,9 @@ export default function RootLayout({
       <body
         className={`${oldLondon.variable} ${cormorant.variable} ${manrope.variable} ${jetbrains.variable} min-h-screen flex flex-col`}
       >
-        <MotionProvider>{children}</MotionProvider>
+        <ThemeProvider>
+          <MotionProvider>{children}</MotionProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -33,4 +33,16 @@ export interface GalleryImage {
   alt: string;
   width: number;
   height: number;
+  title?: string;
+  description?: string;
+  category?: string;
+  tags?: string[];
+  dateTaken?: string;
+  camera?: string;
+  lens?: string;
+  aperture?: string;
+  shutterSpeed?: string;
+  iso?: number;
+  location?: string;
+  featured?: boolean;
 }

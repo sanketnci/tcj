@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Sun, Moon, Car } from 'lucide-react';
+import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { Logo } from '@/components/ui/Logo';
 
 type Theme = 'dark' | 'light';
 
@@ -18,7 +19,7 @@ const navLinks: NavLink[] = [
   { label: 'Home', href: '#hero' },
   { label: 'Articles', href: '#reviews' },
   { label: 'Market News', href: '#news' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -88,21 +89,7 @@ export function Navbar() {
         transition={{ duration: 0.6 }}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 sm:gap-3">
-            <motion.div
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-sm bg-accent-gold flex items-center justify-center shadow-lg"
-              whileHover={{ rotate: 90 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Car className="w-5 h-5 sm:w-6 sm:h-6 text-bg-primary" strokeWidth={2.5} />
-            </motion.div>
-            <span className={cn(
-              "font-heading text-lg sm:text-xl lg:text-2xl tracking-wider drop-shadow-md",
-              isDark ? "text-white" : "text-text-dark"
-            )}>
-              The Car Journal
-            </span>
-          </Link>
+          <Logo />
 
           <div className="hidden xl:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (

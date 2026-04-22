@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Car } from 'lucide-react';
+import { Logo } from '@/components/ui/Logo';
 
 export function Footer() {
   return (
@@ -10,13 +10,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-sm bg-accent-gold flex items-center justify-center">
-                <Car className="w-5 h-5 sm:w-6 sm:h-6 text-bg-primary" strokeWidth={2.5} />
-              </div>
-              <span className="font-heading text-lg sm:text-xl lg:text-2xl text-text-primary tracking-wider">
-                The Car Journal
-              </span>
+            <div className="mb-4 sm:mb-6">
+              <Logo size="md" />
             </div>
             <p className="text-text-secondary max-w-md leading-relaxed text-sm sm:text-base">
               Your destination for premium automotive reviews, industry insights, and the finest 
